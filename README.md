@@ -1,5 +1,7 @@
 # Wordcraft — Quarter 1 Vocabulary
 
+**[Open the practice app](https://iuphysics.github.io/quarter-one-vocab-practice/)**
+
 A responsive, no-build study app based on the supplied Quarter 1 Summative review guide. Includes all 60 vocabulary terms, arranged into three groups of 20 in guide order, plus the six extra words used in question directions.
 
 ## Practice
