@@ -6,6 +6,8 @@ A responsive, no-build study app based on the supplied Quarter 1 Summative revie
 
 ## Practice
 
+Choose **NEW · 50 extra questions** for an additional hand-written question bank: 10 two-word completions, 10 contextual meanings, 10 antonyms, 10 associations, and 10 reading questions across three new passages. With all units selected, the session includes all 50 without repeats. Unit and missed-word filters include only questions whose target words are all in the selected set. Answers and question order are shuffled each session.
+
 - Two-word sentence completions, meanings in context, antonyms, word associations, and reading comprehension
 - Ten-question mixed quizzes with instant explanations
 - Flashcards with self-assessment, searchable word library, and missed-word review

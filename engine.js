@@ -1,3 +1,4 @@
+import {matchingExtras} from './extra-questions.js';
 import {words, passages} from './data.js';
 export const shuffle = xs => {const a=[...xs]; for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]];} return a;};
 export function question(word, mode, pool=words) {
@@ -19,4 +20,4 @@ export function question(word, mode, pool=words) {
  } else {prompt=`What does “${word.word}” mean in this sentence?\n${word.sentence.replace('___',word.word.toLowerCase())}`;answer=word.definition;choices=[answer,...others.slice(0,3).map(w=>w.definition)];}
  return {prompt,answer,choices:shuffle(choices),passage,ids,explanation:ids.map(id=>`${words[id].word}: ${words[id].definition}.`).join(' ')};
 }
-export function makeQuiz(pool,mode,count=10){return shuffle(pool).slice(0,count).map((w,i)=>question(w,mode==='mixed'?['pairs','meaning','antonyms','associations','reading'][i%5]:mode,pool));}
+export function makeQuiz(pool,mode,count=10){if(mode==='extra')return shuffle(matchingExtras(pool)).map(q=>({...q,ids:[...q.ids],choices:shuffle(q.choices)}));return shuffle(pool).slice(0,count).map((w,i)=>question(w,mode==='mixed'?['pairs','meaning','antonyms','associations','reading'][i%5]:mode,pool));}
