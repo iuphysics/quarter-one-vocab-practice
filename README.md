@@ -28,7 +28,7 @@ python3 -m http.server 8000
 npm test
 ```
 
-No packages need to be installed. Optional Google Fonts fall back to system fonts if unavailable. Browser storage may be unavailable in restricted/private contexts; the app still works for the current session. Reset progress is available at the bottom of the page.
+No packages need to be installed. The app uses system fonts and has no external runtime dependencies. Browser storage may be unavailable in restricted/private contexts; the app still works for the current session. Reset progress is available at the bottom of the page.
 
 ## Publish with GitHub Pages
 
@@ -42,3 +42,11 @@ In the repository's **Settings → Pages**, select **Deploy from a branch**, cho
 - `engine.test.js`: dataset and question-generation checks
 
 The repository intentionally excludes the original pasted guide and its sample sentences.
+
+## Offline study
+
+Open the hosted app once while online and wait for **Ready offline**. A service worker saves the full app, all 60 words, all original practice modes, and all 50 additional questions. You can then reopen the bookmarked URL without a connection. Progress remains in local browser storage.
+
+For a home-screen shortcut, use the install button where offered, or the browser's Add to Home Screen menu (Safari's Share menu on iOS). Open the installed app once online and verify its offline status. Browser and installed-app storage can differ, so continue in the same app to keep your progress. Clearing site data, private sessions, or storage eviction can remove offline files and progress.
+
+The worker requires HTTPS (or localhost for development). It caches only app files in this repository's URL scope. Updates download in the background and activate after all existing app tabs close, avoiding disruption of a quiz. Increment `VERSION` in `sw.js` whenever changing cached files. A partial download never reports ready.

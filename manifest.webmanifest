@@ -1,0 +1,12 @@
+{
+ "id": "./",
+ "name": "Wordcraft Vocabulary Practice",
+ "short_name": "Wordcraft",
+ "description": "Study all 60 vocabulary words and every practice question, online or offline.",
+ "start_url": "./",
+ "scope": "./",
+ "display": "standalone",
+ "background_color": "#f6f5ef",
+ "theme_color": "#1e483c",
+ "icons": [{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any"}]
+}
